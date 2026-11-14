@@ -1,6 +1,6 @@
 # media-gen
 
-Turn a plain-language brief into finished media files — **images**, a **voiceover**, and a short **video** — using keyless providers only.
+Turn a plain-language brief into finished media files РІР‚вЂќ **images**, a **voiceover**, and a short **video** РІР‚вЂќ using keyless providers only.
 
 ```bash
 python media_gen.py --brief "three product photos of a ceramic mug on a wooden table" --out out/mug
@@ -11,8 +11,8 @@ python media_gen.py --brief "an 8-second vertical video of coffee being poured" 
 
 | Output | File | Provider |
 |---|---|---|
-| Images (1–10) | `images/01.png …` | [Pollinations](https://image.pollinations.ai) — free tier, keyless |
-| Voiceover | `voiceover.mp3` | [edge-tts](https://github.com/rany2/edge-tts) — Microsoft Edge neural voices, keyless |
+| Images (1РІР‚вЂњ10) | `images/01.png РІР‚В¦` | [Pollinations](https://image.pollinations.ai) РІР‚вЂќ free tier, keyless |
+| Voiceover | `voiceover.mp3` | [edge-tts](https://github.com/rany2/edge-tts) РІР‚вЂќ Microsoft Edge neural voices, keyless |
 | Short video | `video.mp4` | ffmpeg (bundled via `imageio-ffmpeg`) |
 | Manifest | `manifest.json` | what was generated and how |
 
@@ -45,7 +45,7 @@ done: out/coffee
 ## Limitations (honest)
 
 - **Pollinations free tier allows one image per 45 seconds per IP.** The script
-  waits for the advertised retry window, so a 3-image job takes ~1.5–2.5
+  waits for the advertised retry window, so a 3-image job takes ~1.5РІР‚вЂњ2.5
   minutes. A paid "pollen key" removes the limit but is not required.
 - **edge-tts needs outbound access to Microsoft's speech endpoint.** If it is
   blocked, the script logs the failure and still produces images (and a silent
@@ -58,3 +58,13 @@ done: out/coffee
 ## Licence
 
 MIT.
+
+## clip_gen.py - short vertical clips
+
+`ash
+python clip_gen.py --input video.mp4 --out clips/ --clips 3 --max-duration 20 --vertical --title "Launch day"
+`
+
+Detects scene changes with ffmpeg, snaps clip boundaries to them, centre-crops to
+9:16 (1080x1920), optionally burns in a title, and writes clip_01.mp4 вЂ¦ plus
+manifest.json with the exact cut points.
