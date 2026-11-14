@@ -1,0 +1,18 @@
+{
+  "brief": "three product photos of a ceramic mug on a wooden table, soft window light, and an 8-second vertical video presenting it",
+  "plan": {
+    "count": 3,
+    "duration": 8,
+    "aspect": "vertical",
+    "video": true,
+    "voice": true
+  },
+  "provider": "venice",
+  "images": [
+    "C:\\Users\\\u0418\u0432\u0430\u043d\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\deepseek-harness\\money\\media-gen\\demo\\images\\image_01.webp",
+    "C:\\Users\\\u0418\u0432\u0430\u043d\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\deepseek-harness\\money\\media-gen\\demo\\images\\image_02.webp",
+    "C:\\Users\\\u0418\u0432\u0430\u043d\\OneDrive\\\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b\\deepseek-harness\\money\\media-gen\\demo\\images\\image_03.webp"
+  ],
+  "voiceover": "demo\\voiceover.mp3",
+  "video": "demo\\video.mp4"
+}
