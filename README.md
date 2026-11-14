@@ -68,3 +68,13 @@ python clip_gen.py --input video.mp4 --out clips/ --clips 3 --max-duration 20 --
 Detects scene changes with ffmpeg, snaps clip boundaries to them, centre-crops to
 9:16 (1080x1920), optionally burns in a title, and writes clip_01.mp4 вЂ¦ plus
 manifest.json with the exact cut points.
+## Premium image provider: Venice (x402, no account)
+
+`ash
+python media_gen.py --brief "a ceramic mug on a wooden table" --out out/mug --provider venice
+`
+
+Uses the Venice API through x402: the wallet pays per request in USDC on Base, with
+no account, API key or KYC. lux-2-pro costs about \.03 per image. The script
+falls back to Pollinations automatically when Venice is not configured or the
+balance is empty (--provider auto is the default).
